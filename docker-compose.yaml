@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  bitcoin-node:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: bitcoin-node
+    network_mode: "host"
+    ports:
+      - "8332:8332" # RPC port
+    volumes:
+      - .:/root/.bitcoind # Mount the repository directory as a volume
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
+    command: ["-printtoconsole", "-conf=/root/.bitcoind/bitcoin.conf"]
