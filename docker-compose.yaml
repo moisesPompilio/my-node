@@ -6,8 +6,9 @@ services:
       context: .
       dockerfile: dockerfile
     container_name: bitcoin-node
+    restart: always
     network_mode: "host"
     volumes:
-      - .:/root/.bitcoind # Mount the repository directory as a volume
+      - ./data:/root/.bitcoin # Mount the repository directory as a volume
     entrypoint: ["/usr/local/bin/entrypoint.sh"]
     command: ["-printtoconsole", "-conf=/root/.bitcoind/bitcoin.conf"]
