@@ -19,7 +19,7 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Expose the default Bitcoin ports
-EXPOSE 8332 8333
+EXPOSE 8332
 
 # Use the script as the entrypoint
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
