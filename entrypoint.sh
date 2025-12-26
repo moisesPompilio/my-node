@@ -5,4 +5,4 @@ set -e
 # alias bitcoin-cli="bitcoin-cli -rpcuser=$RPC_USER -rpcpassword=$RPC_PASSWORD"
 
 # # Start bitcoind with the provided arguments
-exec bitcoind
+exec bitcoind "$@"

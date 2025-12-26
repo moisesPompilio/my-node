@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 # Copy local binaries into the image
 COPY bitcoind /usr/local/bin/bitcoind
 COPY bitcoin-cli /usr/local/bin/bitcoin-cli
-COPY bitcoin.conf /root/.bitcoin/bitcoin.conf
+COPY bitcoin.conf /bitcoin/bitcoin.conf
 
 # Copy the startup script
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh

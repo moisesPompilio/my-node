@@ -11,4 +11,4 @@ services:
     volumes:
       - ./data:/root/.bitcoin # Mount the repository directory as a volume
     entrypoint: ["/usr/local/bin/entrypoint.sh"]
-    command: ["-printtoconsole", "-conf=/root/.bitcoind/bitcoin.conf"]
+    command: ["-printtoconsole", "-conf=/bitcoin/bitcoin.conf"]
